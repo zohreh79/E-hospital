@@ -1,13 +1,11 @@
 package Ehospital.employee.domain;
 
+import Ehospital.employee.model.enums.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 
-import javax.persistence.Column;
-import javax.persistence.Entity;
-import javax.persistence.Id;
-import javax.persistence.Table;
+import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
@@ -17,6 +15,7 @@ import javax.persistence.Table;
 public class EmployeeDomain {
 
     @Id
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Long id;
 
@@ -30,21 +29,26 @@ public class EmployeeDomain {
     private String position;
 
     @Column(name = "department")
-    private String department;
+    @Enumerated(EnumType.ORDINAL)
+    private DepartmentEnum department;
 
     @Column(name = "state")
-    private String state;
+    @Enumerated(EnumType.ORDINAL)
+    private StateEnum state;
 
     @Column(name = "city")
     private String city;
 
     @Column(name = "sex")
-    private String sex;
+    @Enumerated(EnumType.ORDINAL)
+    private SexEnum sex;
 
     @Column(name = "marital_desc")
-    private String maritalDesc;
+    @Enumerated(EnumType.ORDINAL)
+    private MaritalDescEnum maritalDesc;
 
     @Column(name = "employment_Status")
-    private String employmentStatus;
+    @Enumerated(EnumType.ORDINAL)
+    private EmploymentStatusEnum employmentStatus;
 
 }
