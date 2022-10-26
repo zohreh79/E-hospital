@@ -1,13 +1,13 @@
-package Ehospital.ca;
+package Ehospital.employee;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class CaApplication {
+public class EmployeeApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(CaApplication.class, args);
+		SpringApplication.run(EmployeeApplication.class, args);
 	}
 
 }

@@ -1,4 +1,4 @@
-package Ehospital.ca.controller;
+package Ehospital.employee.controller;
 
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;

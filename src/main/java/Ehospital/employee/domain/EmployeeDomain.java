@@ -1,4 +1,4 @@
-package Ehospital.ca.domain;
+package Ehospital.employee.domain;
 
 import lombok.AllArgsConstructor;
 import lombok.Data;

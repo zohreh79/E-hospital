@@ -1,4 +1,4 @@
-package Ehospital.ca.service;
+package Ehospital.employee.service;
 
 public interface EmployeeService {
 }

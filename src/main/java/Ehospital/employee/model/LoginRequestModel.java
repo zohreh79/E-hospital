@@ -1,4 +1,4 @@
-package Ehospital.ca.model;
+package Ehospital.employee.model;
 
 public class LoginRequestModel {
 }
