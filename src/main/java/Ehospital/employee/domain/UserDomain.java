@@ -1,11 +1,17 @@
 package Ehospital.employee.domain;
 
+import lombok.Getter;
+import lombok.NoArgsConstructor;
+import lombok.Setter;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 
 import javax.persistence.*;
 import java.util.Collection;
 
+@Getter
+@Setter
+@NoArgsConstructor
 @Entity
 @Table(name = "users")
 public class UserDomain implements UserDetails {
@@ -26,6 +32,11 @@ public class UserDomain implements UserDetails {
 
     @Column(name ="unique_id")
     private String uniqueId;
+
+    public UserDomain(String username, String password) {
+        this.username = username;
+        this.password = password;
+    }
 
     @Override
     public Collection<? extends GrantedAuthority> getAuthorities() {

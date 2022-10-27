@@ -1,6 +1,5 @@
 package Ehospital.employee.domain;
 
-import Ehospital.employee.model.enums.*;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
@@ -9,7 +8,6 @@ import javax.persistence.*;
 
 @Data
 @NoArgsConstructor
-@AllArgsConstructor
 @Entity
 @Table(name = "employee")
 public class EmployeeDomain {
@@ -29,26 +27,32 @@ public class EmployeeDomain {
     private String position;
 
     @Column(name = "department")
-    @Enumerated(EnumType.ORDINAL)
-    private DepartmentEnum department;
+    private String department;
 
     @Column(name = "state")
-    @Enumerated(EnumType.ORDINAL)
-    private StateEnum state;
+    private String state;
 
     @Column(name = "city")
     private String city;
 
     @Column(name = "sex")
-    @Enumerated(EnumType.ORDINAL)
-    private SexEnum sex;
+    private String sex;
 
     @Column(name = "marital_desc")
-    @Enumerated(EnumType.ORDINAL)
-    private MaritalDescEnum maritalDesc;
+    private String maritalDesc;
 
     @Column(name = "employment_Status")
-    @Enumerated(EnumType.ORDINAL)
-    private EmploymentStatusEnum employmentStatus;
+    private String employmentStatus;
 
+    public EmployeeDomain(String employeeName, Long empID, String position, String department, String state, String city, String sex, String maritalDesc, String employmentStatus) {
+        this.employeeName = employeeName;
+        this.empID = empID;
+        this.position = position;
+        this.department = department;
+        this.state = state;
+        this.city = city;
+        this.sex = sex;
+        this.maritalDesc = maritalDesc;
+        this.employmentStatus = employmentStatus;
+    }
 }
